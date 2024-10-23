@@ -1,0 +1,80 @@
+@model Assignment5_AyseOzgeErkan.Models.ErrorViewModel
+
+@{
+    var viewDataTypeName = Model.GetType().Name;
+    Layout = "_Layout"; // Set to your layout page if needed
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@viewDataTypeName Details</title>
+</head>
+<body>
+
+<div class="container"/>
+<h1>@ViewData["Title"]</h1>
+<hr/>
+@if (TempData["Message"] != null)
+{
+    
+    <p class="text-danger">@TempData["Message"]</p>
+}
+@if (Model != null)
+{
+    foreach (var property in Model.GetType().GetProperties())
+    {
+        if (!property.Name.EndsWith("Id")) // Assuming foreign keys may end with 'Id'
+        {
+            
+            <div class="row mb-3">
+                <div class="col-2 fw-bold">
+                    @Html.DisplayNameFor(model => property.Name)
+                </div>
+                <div class="col-10">
+                    @Html.DisplayFor(model => property.GetValue(Model))
+                </div>
+            </div>
+        }
+    }
+
+    
+    <hr/>
+
+    string pkName = GetPrimaryKeyName();
+    if (pkName != null)
+    {
+        
+        <a asp-action="Edit" asp-route-id="@Model.GetType().GetProperty(pkName).GetValue(Model)">Edit</a>
+        &nbsp;|&nbsp;
+        
+        <a asp-action="Delete" asp-route-id="@Model.GetType().GetProperty(pkName).GetValue(Model)">Delete</a>
+        &nbsp;|&nbsp;
+        
+        <a asp-action="Index">Back to List</a>
+    }
+    else
+    {
+        
+        <a asp-action="Index">Back to List</a>
+    }
+}
+}
+
+@section Scripts {
+    <!-- Include any necessary scripts here -->
+}
+
+</body>
+</html>
+
+@functions
+{
+    string GetPrimaryKeyName()
+    {
+        var primaryKeys = Model.GetType().GetProperties()
+            .Where(p => p.Name.EndsWith("Id")); // Adjust according to your PK naming conventions
+        return primaryKeys.Count() == 1 ? primaryKeys.First().Name : null;
+    }
+}

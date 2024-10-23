@@ -1,0 +1,81 @@
+using Microsoft.AspNetCore.Mvc;
+using Assignment5_AyseOzgeErkan.Services;  // Adjust based on your namespace
+using Assignment5_AyseOzgeErkan.Models;
+
+namespace Assignment5_AyseOzgeErkan.Controllers
+{
+    [Route("api/[controller]")]
+    [ApiController]
+    public class StudentsController : ControllerBase
+    {
+        private readonly IStudentService _studentService;
+
+        public StudentsController(IStudentService studentService)
+        {
+            _studentService = studentService;
+        }
+
+        // GET: api/students
+        [HttpGet]
+        public IActionResult Get()
+        {
+            var list = _studentService.Query().ToList();
+            return Ok(list);
+        }
+
+        // GET: api/students/5
+        [HttpGet("{id}")]
+        public IActionResult Get(int id)
+        {
+            var student = _studentService.Query().SingleOrDefault(s => s.Id == id);
+            if (student == null)
+                return NotFound();
+            return Ok(student);
+        }
+
+        // POST: api/students
+        [HttpPost]
+        public IActionResult Post(StudentModel studentModel)
+        {
+            if (ModelState.IsValid)
+            {
+                var result = _studentService.Create(studentModel.Record);
+                if (result.IsSuccessful)
+                {
+                    return CreatedAtAction(nameof(Get), new { id = studentModel.Record.Id }, studentModel.Record);
+                }
+                ModelState.AddModelError("StudentPost", result.Message);
+            }
+            return BadRequest(ModelState);
+        }
+
+        // PUT: api/students
+        [HttpPut]
+        public IActionResult Put(StudentModel studentModel)
+        {
+            if (ModelState.IsValid)
+            {
+                var result = _studentService.Update(studentModel.Record);
+                if (result.IsSuccessful)
+                {
+                    return Ok(studentModel);
+                }
+                ModelState.AddModelError("StudentPut", result.Message);
+            }
+            return BadRequest(ModelState);
+        }
+
+        // DELETE: api/students/5
+        [HttpDelete("{id}")]
+        public IActionResult Delete(int id)
+        {
+            var result = _studentService.Delete(id);
+            if (result.IsSuccessful)
+            {
+                return NoContent();
+            }
+            ModelState.AddModelError("StudentDelete", result.Message);
+            return BadRequest(ModelState);
+        }
+    }
+}

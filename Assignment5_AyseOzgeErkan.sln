@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignment5_AyseOzgeErkan", "Assignment5_AyseOzgeErkan\Assignment5_AyseOzgeErkan.csproj", "{8B92B7D5-0B54-4A5A-8E14-37B21A05C42E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{B77F5B5A-60B3-4F19-919A-7039BCD4DCEB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8B92B7D5-0B54-4A5A-8E14-37B21A05C42E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B92B7D5-0B54-4A5A-8E14-37B21A05C42E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B92B7D5-0B54-4A5A-8E14-37B21A05C42E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B92B7D5-0B54-4A5A-8E14-37B21A05C42E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B77F5B5A-60B3-4F19-919A-7039BCD4DCEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B77F5B5A-60B3-4F19-919A-7039BCD4DCEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B77F5B5A-60B3-4F19-919A-7039BCD4DCEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B77F5B5A-60B3-4F19-919A-7039BCD4DCEB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

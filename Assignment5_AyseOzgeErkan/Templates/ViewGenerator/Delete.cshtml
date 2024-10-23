@@ -1,0 +1,67 @@
+﻿@model Assignment5_AyseOzgeErkan.Models.ErrorViewModel
+
+@{
+    var viewDataTypeName = Model.GetType().Name;
+}
+
+<!-- Setting Layout Page if needed -->
+@{
+    Layout = "_Layout"; <!-- Adjust based on your layout -->
+}
+
+<div class="container">
+    <h1>@ViewData["Title"]</h1>
+    <hr />
+</div>
+
+@if (Model != null)
+{
+    <div class="container">
+        <!-- Display any TempData message -->
+        @if (TempData["Message"] != null)
+        {
+            <p class="text-danger">
+                @TempData["Message"]
+            </p>
+        }
+
+        <h3 class="text-danger">Are you sure you want to delete?</h3>
+        <hr />
+
+        <!-- Display Model Properties -->
+        @foreach (var property in Model.GetType().GetProperties())
+        {
+            if (!property.GetGetMethod().IsVirtual && property.CanWrite && !property.Name.Contains("Id"))
+            {
+                <div class="row mb-3">
+                    <div class="col-2 fw-bold">
+                        @Html.DisplayNameFor(model => property.Name)
+                    </div>
+                    <div class="col-10">
+                        @Html.DisplayFor(model => property.GetValue(Model))
+                    </div>
+                </div>
+            }
+        }
+
+        <hr />
+        <!-- Form for Deletion -->
+        <form asp-action="Delete">
+            @Html.AntiForgeryToken()
+
+            <!-- Hidden fields for primary keys -->
+            @foreach (var key in Model.GetType().GetProperties().Where(p => p.Name.Contains("Id")))
+            {
+                <input type="hidden" name="@key.Name" value="@key.GetValue(Model)" />
+            }
+
+            <input type="submit" value="Yes" class="btn btn-danger" />
+            &nbsp;&nbsp;
+            <a asp-action="Index" class="btn btn-outline-danger">No</a>
+        </form>
+    </div>
+}
+
+@section Scripts {
+    <!-- Include necessary client-side scripts here -->
+}

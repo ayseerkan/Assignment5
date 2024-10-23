@@ -1,0 +1,83 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Assignment5_AyseOzgeErkan
+build_property.RootNamespace = Assignment5_AyseOzgeErkan
+build_property.ProjectDir = /Users/ayseerkan/Desktop/Rider Sols/Assignment5_AyseOzgeErkan/Assignment5_AyseOzgeErkan/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /Users/ayseerkan/Desktop/Rider Sols/Assignment5_AyseOzgeErkan/Assignment5_AyseOzgeErkan
+build_property._RazorSourceGeneratorDebug = 
+
+[/Users/ayseerkan/Desktop/Rider Sols/Assignment5_AyseOzgeErkan/Assignment5_AyseOzgeErkan/Templates/ControllerGenerator/ApiControllerWithContext.cshtml]
+build_metadata.AdditionalFiles.TargetPath = VGVtcGxhdGVzL0NvbnRyb2xsZXJHZW5lcmF0b3IvQXBpQ29udHJvbGxlcldpdGhDb250ZXh0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ayseerkan/Desktop/Rider Sols/Assignment5_AyseOzgeErkan/Assignment5_AyseOzgeErkan/Templates/ControllerGenerator/MvcControllerWithContext.cshtml]
+build_metadata.AdditionalFiles.TargetPath = VGVtcGxhdGVzL0NvbnRyb2xsZXJHZW5lcmF0b3IvTXZjQ29udHJvbGxlcldpdGhDb250ZXh0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ayseerkan/Desktop/Rider Sols/Assignment5_AyseOzgeErkan/Assignment5_AyseOzgeErkan/Templates/ViewGenerator/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = VGVtcGxhdGVzL1ZpZXdHZW5lcmF0b3IvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ayseerkan/Desktop/Rider Sols/Assignment5_AyseOzgeErkan/Assignment5_AyseOzgeErkan/Templates/ViewGenerator/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = VGVtcGxhdGVzL1ZpZXdHZW5lcmF0b3IvRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ayseerkan/Desktop/Rider Sols/Assignment5_AyseOzgeErkan/Assignment5_AyseOzgeErkan/Templates/ViewGenerator/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = VGVtcGxhdGVzL1ZpZXdHZW5lcmF0b3IvRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ayseerkan/Desktop/Rider Sols/Assignment5_AyseOzgeErkan/Assignment5_AyseOzgeErkan/Templates/ViewGenerator/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = VGVtcGxhdGVzL1ZpZXdHZW5lcmF0b3IvRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ayseerkan/Desktop/Rider Sols/Assignment5_AyseOzgeErkan/Assignment5_AyseOzgeErkan/Templates/ViewGenerator/Empty.cshtml]
+build_metadata.AdditionalFiles.TargetPath = VGVtcGxhdGVzL1ZpZXdHZW5lcmF0b3IvRW1wdHkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ayseerkan/Desktop/Rider Sols/Assignment5_AyseOzgeErkan/Assignment5_AyseOzgeErkan/Templates/ViewGenerator/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = VGVtcGxhdGVzL1ZpZXdHZW5lcmF0b3IvTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ayseerkan/Desktop/Rider Sols/Assignment5_AyseOzgeErkan/Assignment5_AyseOzgeErkan/Templates/ViewGenerator/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = VGVtcGxhdGVzL1ZpZXdHZW5lcmF0b3IvX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ayseerkan/Desktop/Rider Sols/Assignment5_AyseOzgeErkan/Assignment5_AyseOzgeErkan/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ayseerkan/Desktop/Rider Sols/Assignment5_AyseOzgeErkan/Assignment5_AyseOzgeErkan/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ayseerkan/Desktop/Rider Sols/Assignment5_AyseOzgeErkan/Assignment5_AyseOzgeErkan/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ayseerkan/Desktop/Rider Sols/Assignment5_AyseOzgeErkan/Assignment5_AyseOzgeErkan/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ayseerkan/Desktop/Rider Sols/Assignment5_AyseOzgeErkan/Assignment5_AyseOzgeErkan/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ayseerkan/Desktop/Rider Sols/Assignment5_AyseOzgeErkan/Assignment5_AyseOzgeErkan/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ayseerkan/Desktop/Rider Sols/Assignment5_AyseOzgeErkan/Assignment5_AyseOzgeErkan/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-wybwz4xctu

@@ -1,0 +1,115 @@
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Assignment5_AyseOzgeErkan.Services;
+using Assignment5_AyseOzgeErkan.Models;
+using System;
+using System.Linq;
+
+namespace Assignment5_AyseOzgeErkan.Controllers
+{
+public class StudentsController : MvcController
+{
+// Service injections
+private readonly IStudentService _studentService;
+private readonly ICourseService _courseService;
+
+public StudentsController(
+IStudentService studentService,
+ICourseService courseService)
+{
+_studentService = studentService;
+_courseService = courseService;
+}
+
+// GET: Students
+public IActionResult Index()
+{
+var list = _studentService.Query().ToList();
+return View(list);
+}
+
+// GET: Students/Details/5
+public IActionResult Details(int id)
+{
+var student = _studentService.Query().SingleOrDefault(s => s.Id == id);
+return View(student);
+}
+
+protected void SetViewData()
+{
+// Set related data in ViewData
+ViewData["CourseId"] = new SelectList(_courseService.Query().ToList(), "Id", "Name");
+}
+
+// GET: Students/Create
+public IActionResult Create()
+{
+SetViewData();
+return View();
+}
+
+// POST: Students/Create
+[HttpPost]
+[ValidateAntiForgeryToken]
+public IActionResult Create(StudentModel studentModel)
+{
+if (ModelState.IsValid)
+{
+studentModel.Record.Id = Guid.NewGuid();  // Set ID for the new record if required
+var result = _studentService.Create(studentModel.Record);
+if (result.IsSuccessful)
+{
+TempData["Message"] = result.Message;
+return RedirectToAction(nameof(Details), new { id = studentModel.Record.Id });
+}
+ModelState.AddModelError("", result.Message);
+}
+SetViewData();
+return View(studentModel);
+}
+
+// GET: Students/Edit/5
+public IActionResult Edit(int id)
+{
+var student = _studentService.Query().SingleOrDefault(s => s.Id == id);
+SetViewData();
+return View(student);
+}
+
+// POST: Students/Edit
+[HttpPost]
+[ValidateAntiForgeryToken]
+public IActionResult Edit(StudentModel studentModel)
+{
+if (ModelState.IsValid)
+{
+var result = _studentService.Update(studentModel.Record);
+if (result.IsSuccessful)
+{
+TempData["Message"] = result.Message;
+return RedirectToAction(nameof(Details), new { id = studentModel.Record.Id });
+}
+ModelState.AddModelError("", result.Message);
+}
+SetViewData();
+return View(studentModel);
+}
+
+// GET: Students/Delete/5
+public IActionResult Delete(int id)
+{
+var student = _studentService.Query().SingleOrDefault(s => s.Id == id);
+return View(student);
+}
+
+// POST: Students/Delete
+[HttpPost, ActionName("Delete")]
+[ValidateAntiForgeryToken]
+public IActionResult DeleteConfirmed(int id)
+{
+var result = _studentService.Delete(id);
+TempData["Message"] = result.Message;
+return RedirectToAction(nameof(Index));
+}
+}
+}
